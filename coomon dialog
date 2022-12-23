@@ -1,0 +1,22 @@
+class RegistrationDialog(val activity: Activity) {
+    fun dialog(context: Context, tittle: String, message: String, checked: Boolean) {
+
+
+        var materialDialogs = MaterialAlertDialogBuilder(context)
+
+        materialDialogs.setTitle(tittle)
+        materialDialogs.setMessage(message)
+
+        materialDialogs.setPositiveButton(R.string.okk) { ,  ->
+             if (message == "Registration successfull") {
+    activity.startActivity(Intent(context, SignInActivity::class.java))
+            } else {
+                Toast.makeText(activity, "not successfull", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+        materialDialogs.show()
+
+
+    }
+}
