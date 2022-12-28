@@ -1,3 +1,22 @@
+
+access using ........
+  private lateinit var commonFun: CommonValidation
+                     
+   commonFun = CommonValidation(this)
+                        KeyBordHide().hideSoftKeyBoard(this@RegisterActivity)
+                        commonFun.dialog(
+                            this@RegisterActivity,
+                            myData.status,
+                            myData.message,
+                      
+1,
+  getString(R.string.registerDialog)
+ )
+
+
+
+
+
 package common
 
 import android.app.Activity
